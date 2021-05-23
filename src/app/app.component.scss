@@ -1,0 +1,25 @@
+h1 {
+  color: #ffffff;
+}
+
+section, h1 {
+  width: 60%;
+  margin: 10px auto;
+}
+
+.list-view {
+  margin-bottom: 50px;
+
+  display: flex;
+  flex-direction: column;
+
+  app-tile {
+    margin: 8px 0;
+  }
+}
+
+.grid-view {
+  display: grid;
+  grid-gap: 16px;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));;
+}

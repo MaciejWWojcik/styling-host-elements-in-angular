@@ -1,0 +1,10 @@
+<ng-container *ngIf="person">
+  <img [src]="person.avatar" alt="avatar of the person">
+  <article>
+    <h2>{{person.name}} {{person.lastName}}</h2>
+    <p class="tags">
+      <span *ngFor="let tag of person.tags">#{{tag}}</span>
+    </p>
+    <p class="description">{{person.description}}</p>
+  </article>
+</ng-container>
