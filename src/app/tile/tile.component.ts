@@ -1,5 +1,5 @@
 import { Component, HostBinding, Input } from '@angular/core';
-import { Person } from '../models/person';
+import { Person, TileState } from '../models/person';
 
 @Component({
   selector: 'app-tile',
@@ -13,5 +13,7 @@ export class TileComponent {
   @HostBinding('class.highlighted') get promoted(): boolean {
     return !!this.person?.promoted;
   }
+
+  @Input() @HostBinding('attr.data-state') state: TileState = 'regular';
 
 }

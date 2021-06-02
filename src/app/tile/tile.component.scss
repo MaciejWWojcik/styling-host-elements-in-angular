@@ -1,6 +1,10 @@
 $primary-color: #0092ed;
 $white-color: #ffffff;
+$light-grey-color: #DEDEDE;
+$dark-grey-color: #A2A2A2;
 
+// --- :host ---
+// basic style that targets host element using ":host" pseudo class selector
 :host {
   color: $white-color;
   border-radius: 10px;
@@ -8,8 +12,11 @@ $white-color: #ffffff;
   padding: 20px;
   display: flex;
   align-items: center;
+  background: var(--tile-background);
 }
 
+// --- @HostBinding ---
+// style that uses @HostBinding('class.highlighted') promoted, that enables that or not
 :host.highlighted {
   background-color: $white-color;
   color: $primary-color;
@@ -20,6 +27,8 @@ $white-color: #ffffff;
   }
 }
 
+// --- :host-context ---
+// style that checks the context in which this component is used
 :host-context(.list-view) {
   flex-direction: row;
 
@@ -37,6 +46,33 @@ $white-color: #ffffff;
   }
 }
 
+// --- @HostBinding ---
+// style that uses  @Input() @HostBinding('attr.data-state') state that allow setting an exclusive value from many options
+:host[data-state='active'] {
+  background-color: $white-color;
+  color: $primary-color;
+
+  img {
+    border-color: $primary-color;
+    background-color: $primary-color;
+  }
+}
+
+:host[data-state='disabled'] {
+  background-color: $light-grey-color;
+  color: $dark-grey-color;
+
+  img {
+    border-color: $dark-grey-color;
+    background-color: $light-grey-color;
+  }
+}
+
+:host[data-state='regular'] {
+}
+
+
+// --- rest of the styles, needed to setup the component, nothing interesting ---
 img {
   display: block;
   width: 100px;

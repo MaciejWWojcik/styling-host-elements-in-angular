@@ -6,3 +6,9 @@ export interface Person {
   description: string;
   promoted?: boolean;
 }
+
+export type TileState = 'active' | 'disabled' | 'regular';
+
+export interface PersonTile extends Person {
+  state: TileState;
+}

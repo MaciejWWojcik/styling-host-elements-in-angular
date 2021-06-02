@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { Person } from './models/person';
+import { Person, PersonTile } from './models/person';
 
 const description = 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua Ut enim ad minim veniam, quis nostrud exercitation ullamco… laboris nisi ut aliquip ex ea commodo consequat… ';
 
@@ -40,5 +40,11 @@ export class AppComponent {
       tags: ['UX', 'UI'],
       description,
     },
+  ];
+
+  readonly personWithStates: PersonTile[] = [
+    { ...this.persons[1], state: 'active' },
+    { ...this.persons[2], state: 'regular' },
+    { ...this.persons[3], state: 'disabled' },
   ];
 }

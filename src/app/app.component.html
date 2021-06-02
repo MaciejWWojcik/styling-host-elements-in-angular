@@ -7,3 +7,17 @@
 <section class="grid-view">
   <app-tile *ngFor="let person of persons" [person]="person"></app-tile>
 </section>
+
+<h1>Grid view with various tile states</h1>
+<section class="grid-view">
+  <app-tile [person]="personWithStates[0]" [state]="'active'"></app-tile>
+  <app-tile [person]="personWithStates[1]" [state]="'disabled'"></app-tile>
+  <app-tile [person]="personWithStates[2]" [state]="'regular'"></app-tile>
+</section>
+
+<h1>Grid view with different backgrounds</h1>
+<section class="grid-view">
+  <app-tile [person]="personWithStates[0]" class="purple"></app-tile>
+  <app-tile [person]="personWithStates[1]" class="red"></app-tile>
+  <app-tile [person]="personWithStates[2]" class="green"></app-tile>
+</section>

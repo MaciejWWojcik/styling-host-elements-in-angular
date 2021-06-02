@@ -8,8 +8,6 @@ section, h1 {
 }
 
 .list-view {
-  margin-bottom: 50px;
-
   display: flex;
   flex-direction: column;
 
@@ -21,5 +19,21 @@ section, h1 {
 .grid-view {
   display: grid;
   grid-gap: 16px;
-  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+}
+
+.list-view, .grid-view {
+  margin-bottom: 50px;
+}
+
+.purple {
+  --tile-background: #6a1b9a;
+}
+
+.red {
+  --tile-background: #bf360c;
+}
+
+.green {
+  --tile-background: #689f38;
 }
