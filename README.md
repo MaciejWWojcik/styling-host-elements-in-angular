@@ -1,6 +1,6 @@
 # Styling Host Elements In Angular
 
-This project includes example code used for this article...
+This project includes example code used for this article https://indepth.dev/posts/1469/techniques-to-style-component-host-element-in-angular
 
 ## Techniques to style component host element
 
